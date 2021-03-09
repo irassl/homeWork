@@ -3,7 +3,7 @@
 #xargs -n2 
 
 # для того, чтобы урать grep -oP '\d+\.\d+', можно подставить 0 в массив
-jq=`jq '.prices[][0]' -r  quotes.json  
+jq1=`jq '.prices[][0]' -r  quotes.json  
 
 #jq=`jq '.prices[][0] |= (. / 1000 | strftime("%Y-%m-%d"))' -r  quotes.json `
 # преобразовывает в дату можно вытащить март осталось найти сумму
