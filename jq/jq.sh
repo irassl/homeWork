@@ -15,14 +15,11 @@
 jq=`jq '.prices[][]' -r  quotes.json  | xargs -n2 | \
  awk '{ $1=strftime("%Y-%B-%d", (($1 / 1000)));  if ($1 ~ "Mar")  print $1 }'`
 
-for dt in ${jq}
-do
- echo $dt
-done
+echo $jq
 # разделить по годам
 
 # $(( $(( $max - $min )) / 2 ))
 
 
-date -d '2020-March-26` +%s
+#date -d '2020-March-26` +%s
 
